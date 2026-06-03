@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signal — Michaël Petit · Intelligence comportementale pour dirigeants</title>
+<meta name="description" content="Signal, l'intelligence comportementale de Michaël Petit. Profilage et lecture comportementale pour dirigeants, comités de direction et décideurs au Luxembourg.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Michaël Petit">
+<link rel="canonical" href="https://jelislesgens.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Signal">
+<meta property="og:title" content="Signal — Je lis les gens.">
+<meta property="og:description" content="Intelligence comportementale et profilage pour dirigeants et décideurs. Avant chaque décision, il y a ce qui ne se dit pas. Michaël Petit le rend lisible.">
+<meta property="og:url" content="https://jelislesgens.com/">
+<meta property="og:image" content="https://jelislesgens.com/michael-petit.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Signal — Je lis les gens.">
+<meta name="twitter:description" content="Intelligence comportementale et profilage pour dirigeants et décideurs au Luxembourg.">
+<meta name="twitter:image" content="https://jelislesgens.com/michael-petit.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Signal — Intelligence comportementale",
+  "description": "Profilage et lecture comportementale pour dirigeants, comités de direction et décideurs.",
+  "url": "https://jelislesgens.com/",
+  "image": "https://jelislesgens.com/michael-petit.jpg",
+  "areaServed": "Luxembourg",
+  "slogan": "Je lis les gens.",
+  "founder": { "@type": "Person", "name": "Michaël Petit", "jobTitle": "Conseiller en intelligence comportementale" },
+  "knowsAbout": ["profilage", "intelligence comportementale", "analyse comportementale", "négociation", "recrutement de dirigeants"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --noir: #0C0B0A;
+    --charbon: #15130F;
+    --champagne: #C5A572;
+    --or: #D9BC85;
+    --or-clair: #E8D4A8;
+    --creme: #EDE6D8;
+    --creme-doux: #B8AE9C;
+    --ligne: rgba(197, 165, 114, 0.22);
+    --ligne-douce: rgba(197, 165, 114, 0.12);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--noir);
+    color: var(--creme);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: "";
+    position: fixed; inset: 0; pointer-events: none; z-index: 9999; opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 24px 6vw; transition: all 0.5s ease; background: transparent; }
+  nav.scrolled { padding: 14px 6vw; background: rgba(12,11,10,0.85); backdrop-filter: blur(14px); border-bottom: 1px solid var(--ligne); }
+  .brand { line-height: 1.15; }
+  .brand .name { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; line-height: 1; letter-spacing: 0.46em; color: var(--creme); text-transform: uppercase; padding-left: 0.46em; }
+  .brand .tag { display: block; font-size: 0.58rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--champagne); margin-top: 9px; padding-left: 0.5em; }
+  .nav-cta { border: 1px solid var(--ligne); padding: 13px 26px; color: var(--or); text-decoration: none; font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase; transition: all 0.4s; }
+  .nav-cta:hover { background: var(--or); color: var(--noir); }
+  .burger { display: none; }
+
+  /* HERO */
+  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 0 6vw; position: relative; overflow: hidden;
+    background: radial-gradient(ellipse 70% 60% at 72% 45%, rgba(197,165,114,0.07), transparent 60%), var(--noir); }
+  .radar { position: absolute; right: 2vw; top: 50%; transform: translateY(-50%); width: 56vw; max-width: 760px; opacity: 0; animation: fadeIn 2.4s ease 0.6s forwards; pointer-events: none; }
+  .radar .sweep { transform-origin: 50% 50%; animation: spin 14s linear infinite; }
+  .hero-eyebrow { font-size: 0.76rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--champagne); margin-bottom: 34px; opacity: 0; animation: fadeUp 1s ease 0.2s forwards; position: relative; z-index: 2; }
+  .hero-eyebrow span { display: inline-block; width: 46px; height: 1px; background: var(--champagne); vertical-align: middle; margin-right: 18px; }
+  .hero h1 { font-size: clamp(3.4rem, 11vw, 9rem); line-height: 0.94; letter-spacing: -0.02em; margin-bottom: 40px; position: relative; z-index: 2; }
+  .hero h1 .line { display: block; overflow: hidden; }
+  .hero h1 .line span { display: block; opacity: 0; transform: translateY(110%); animation: lineUp 1.1s cubic-bezier(0.22,1,0.36,1) forwards; }
+  .hero h1 .line:nth-child(1) span { animation-delay: 0.4s; }
+  .hero h1 .line:nth-child(2) span { animation-delay: 0.56s; }
+  .hero h1 .dot { color: var(--or); }
+  .hero-sub { font-size: 1.1rem; max-width: 44ch; color: var(--creme-doux); margin-bottom: 50px; position: relative; z-index: 2; opacity: 0; animation: fadeUp 1s ease 1s forwards; }
+  .hero-actions { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; position: relative; z-index: 2; opacity: 0; animation: fadeUp 1s ease 1.2s forwards; }
+  .btn-primary { background: var(--or); color: var(--noir); padding: 18px 38px; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; transition: all 0.4s; border: 1px solid var(--or); }
+  .btn-primary:hover { background: transparent; color: var(--or); }
+  .btn-ghost { color: var(--creme); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; border: 1px solid var(--ligne); padding: 18px 34px; transition: all 0.3s; }
+  .btn-ghost:hover { color: var(--or); border-color: var(--or); }
+
+  /* SECTIONS */
+  section { padding: 130px 6vw; position: relative; }
+  .label { font-size: 0.7rem; letter-spacing: 0.34em; text-transform: uppercase; color: var(--champagne); margin-bottom: 30px; display: flex; align-items: center; gap: 18px; }
+  .label::before { content: ""; width: 46px; height: 1px; background: var(--champagne); }
+  .reveal { opacity: 0; transform: translateY(40px); transition: opacity 1s ease, transform 1s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .big { font-size: clamp(2.2rem, 5.5vw, 4.4rem); line-height: 1.06; letter-spacing: -0.01em; }
+  .big em, .em { font-style: italic; color: var(--or); }
+
+  /* NON-DIT */
+  .nondit { border-top: 1px solid var(--ligne); }
+  .nondit-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 7vw; align-items: end; }
+  .nondit h2 { margin-bottom: 0; }
+  .nondit-text p { font-size: 1.08rem; color: var(--creme-doux); margin-bottom: 36px; max-width: 46ch; }
+  .nondit-text .pull { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.7rem; color: var(--or-clair); line-height: 1.35; border-left: 1px solid var(--or); padding-left: 28px; margin: 0; }
+
+  /* ACCOMPAGNEMENT */
+  .accomp { background: var(--charbon); border-top: 1px solid var(--ligne); border-bottom: 1px solid var(--ligne); }
+  .accomp-head { max-width: 56ch; margin-bottom: 70px; }
+  .accomp-head h2 { margin-bottom: 26px; }
+  .accomp-head p { color: var(--creme-doux); font-size: 1.05rem; max-width: 50ch; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ligne); border-left: 1px solid var(--ligne); }
+  .card { padding: 46px 38px 38px; border-right: 1px solid var(--ligne); border-bottom: 1px solid var(--ligne); transition: background 0.4s; }
+  .card:hover { background: rgba(197,165,114,0.04); }
+  .card .num { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--or); letter-spacing: 0.3em; margin-bottom: 26px; }
+  .card h3 { font-size: 1.7rem; margin-bottom: 18px; color: var(--creme); }
+  .card p { color: var(--creme-doux); font-size: 0.96rem; margin-bottom: 30px; }
+  .card .foot { font-size: 0.66rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--champagne); padding-top: 22px; border-top: 1px solid var(--ligne-douce); }
+
+  /* FONDEE */
+  .fondee-head { max-width: 60ch; margin-bottom: 80px; }
+  .fondee-head h2 { margin-bottom: 28px; }
+  .fondee-head p { color: var(--creme-doux); font-size: 1.05rem; max-width: 56ch; }
+  .quatre { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+  .col { padding: 0 34px 0 0; border-top: 1px solid var(--or); padding-top: 30px; }
+  .col h3 { font-size: 1.5rem; color: var(--or); margin-bottom: 22px; line-height: 1.2; }
+  .col p { color: var(--creme-doux); font-size: 0.95rem; }
+  .fondee-pull { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(1.5rem, 3vw, 2.2rem); color: var(--or-clair); line-height: 1.4; max-width: 26ch; margin-top: 90px; }
+
+  /* POUR QUI */
+  .pourqui { background: var(--charbon); border-top: 1px solid var(--ligne); border-bottom: 1px solid var(--ligne); }
+  .pourqui h2 { margin-bottom: 60px; max-width: 14ch; }
+  .tags { display: flex; flex-wrap: wrap; gap: 16px; }
+  .tag-chip { border: 1px solid var(--ligne); padding: 18px 30px; font-size: 0.95rem; color: var(--creme); letter-spacing: 0.04em; transition: all 0.4s; }
+  .tag-chip:hover { border-color: var(--or); color: var(--or-clair); background: rgba(197,165,114,0.04); }
+
+  /* PRATICIEN */
+  .praticien-grid { display: grid; grid-template-columns: 0.8fr 1.1fr; gap: 6vw; align-items: center; }
+  .praticien-img { position: relative; }
+  .praticien-img img { width: 100%; display: block; filter: grayscale(22%) contrast(1.02); border: 1px solid var(--ligne); }
+  .praticien-img .cap { position: absolute; bottom: -1px; left: -1px; right: -1px; padding: 18px 24px; background: linear-gradient(transparent, rgba(12,11,10,0.92)); font-size: 0.64rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--champagne); }
+  .praticien-body h2 { font-size: clamp(2.6rem, 5vw, 4rem); margin-bottom: 36px; color: var(--creme-doux); }
+  .praticien-body p { color: var(--creme-doux); font-size: 1.05rem; margin-bottom: 26px; max-width: 50ch; }
+  .praticien-body .pull { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.5rem; color: var(--or-clair); line-height: 1.4; border-left: 1px solid var(--or); padding-left: 26px; margin-top: 36px; }
+
+  /* CONTACT */
+  .contact { background: var(--charbon); border-top: 1px solid var(--ligne); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 7vw; align-items: start; }
+  .contact-left h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.08; margin-bottom: 30px; }
+  .contact-left p { color: var(--creme-doux); font-size: 1.08rem; max-width: 40ch; }
+  .field { margin-bottom: 36px; }
+  .field label { display: block; font-size: 0.66rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--champagne); margin-bottom: 14px; }
+  .field input, .field textarea { width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--ligne); color: var(--creme); font-family: 'Jost', sans-serif; font-size: 1.05rem; font-weight: 300; padding: 8px 0; transition: border-color 0.3s; }
+  .field input:focus, .field textarea:focus { outline: none; border-color: var(--or); }
+  .field textarea { resize: vertical; min-height: 90px; }
+  .submit { width: 100%; background: var(--or); color: var(--noir); border: 1px solid var(--or); padding: 22px; font-family: 'Jost', sans-serif; font-size: 0.74rem; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 500; cursor: pointer; transition: all 0.4s; margin-top: 10px; }
+  .submit:hover { background: transparent; color: var(--or); }
+  .confid { font-size: 0.85rem; color: var(--creme-doux); margin-top: 22px; }
+  .sent { color: var(--or-clair); font-style: italic; margin-top: 18px; font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; display: none; }
+
+  /* FOOTER */
+  footer { text-align: center; padding: 90px 6vw; }
+  footer .name { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; letter-spacing: 0.5em; color: var(--creme); text-transform: uppercase; padding-left: 0.5em; }
+  footer .moto { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.3rem; color: var(--or); margin: 22px 0 26px; }
+  footer .meta { font-size: 0.78rem; letter-spacing: 0.16em; color: var(--creme-doux); }
+
+  @keyframes lineUp { to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn { to { opacity: 1; } }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  @media (max-width: 980px) {
+    .nondit-grid, .praticien-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+    .cards { grid-template-columns: 1fr; }
+    .quatre { grid-template-columns: 1fr 1fr; gap: 40px 30px; }
+    .radar { width: 90vw; opacity: 0.5 !important; right: -20vw; }
+    .praticien-img { max-width: 380px; }
+    section { padding: 90px 7vw; }
+  }
+  @media (max-width: 600px) {
+    .quatre { grid-template-columns: 1fr; }
+    .brand .name { font-size: 1.18rem; letter-spacing: 0.34em; }
+    .brand .tag { font-size: 0.5rem; letter-spacing: 0.26em; margin-top: 7px; }
+    .nav-cta { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="brand">
+    <span class="name">Signal</span>
+    <span class="tag">Intelligence comportementale</span>
+  </div>
+  <a href="#contact" class="nav-cta">Conversation confidentielle</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <svg class="radar" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#C5A572" stroke-width="0.6" opacity="0.32">
+      <circle cx="300" cy="300" r="80"/>
+      <circle cx="300" cy="300" r="150"/>
+      <circle cx="300" cy="300" r="220"/>
+      <circle cx="300" cy="300" r="290"/>
+      <line x1="10" y1="300" x2="590" y2="300"/>
+      <line x1="300" y1="10" x2="300" y2="590"/>
+      <line x1="95" y1="95" x2="505" y2="505"/>
+      <line x1="505" y1="95" x2="95" y2="505"/>
+    </g>
+    <g class="sweep">
+      <line x1="300" y1="300" x2="300" y2="40" stroke="#D9BC85" stroke-width="1" opacity="0.5"/>
+      <circle cx="300" cy="120" r="4" fill="#D9BC85" opacity="0.7"/>
+    </g>
+    <circle cx="300" cy="300" r="14" fill="#C5A572" opacity="0.85"/>
+  </svg>
+
+  <div class="hero-eyebrow"><span></span>Intelligence comportementale · Luxembourg</div>
+  <h1>
+    <span class="line"><span>Je lis</span></span>
+    <span class="line"><span>les gens<span class="dot">.</span></span></span>
+  </h1>
+  <p class="hero-sub">Avant chaque décision, il y a ce qui ne se dit pas. Je le rends lisible : en négociation, à la table d'un deal, dans un recrutement qui n'a pas droit à l'erreur.</p>
+  <div class="hero-actions">
+    <a href="#contact" class="btn-primary">Réserver une conversation confidentielle</a>
+  </div>
+</header>
+
+<!-- LE NON-DIT -->
+<section class="nondit">
+  <div class="nondit-grid">
+    <div class="reveal">
+      <div class="label">Le non-dit</div>
+      <h2 class="big">Ce qui se joue n'est presque jamais ce qui <em>se dit</em>.</h2>
+    </div>
+    <div class="nondit-text reveal">
+      <p>Une poignée de main qui hésite. Un silence un peu trop long. Une congruence qui se fissure une fraction de seconde. Les décideurs perdent rarement sur les chiffres. Ils perdent sur ce qu'ils n'ont pas vu venir.</p>
+      <p class="pull">Mon métier : voir ce que les autres ratent.</p>
+    </div>
+  </div>
+</section>
+
+<!-- L'ACCOMPAGNEMENT -->
+<section class="accomp">
+  <div class="accomp-head reveal">
+    <div class="label">L'accompagnement</div>
+    <h2 class="big">À la carte. Selon <em>l'enjeu</em>.</h2>
+    <p>Chaque mission est sur mesure. On part de votre situation, jamais d'un forfait. Voici les portes d'entrée les plus fréquentes.</p>
+  </div>
+  <div class="cards">
+    <div class="card reveal"><div class="num">01</div><h3>Lecture avant négociation</h3><p>Briefing comportemental d'un interlocuteur ou d'une table avant une réunion décisive : M&amp;A, levée, contrat. Vous entrez en connaissant le terrain.</p><div class="foot">Sur conversation</div></div>
+    <div class="card reveal"><div class="num">02</div><h3>Présence en réunion</h3><p>J'observe en direct, sur place ou à distance ; débrief immédiat. Vous repartez avec la carte du jeu réel.</p><div class="foot">Sur conversation</div></div>
+    <div class="card reveal"><div class="num">03</div><h3>Profilage d'un recrutement clé</h3><p>Au-delà du CV : congruence du discours, signaux de risque, motivations réelles d'un cadre dirigeant ou d'un futur associé.</p><div class="foot">Sur conversation</div></div>
+    <div class="card reveal"><div class="num">04</div><h3>Dossier comportemental</h3><p>Brief écrit et confidentiel sur une personne cible : archétype dominant, leviers, points de friction, manière de l'aborder. Livré en PDF.</p><div class="foot">Sur conversation</div></div>
+    <div class="card reveal"><div class="num">05</div><h3>Dynamique de comité</h3><p>Lecture des rapports de pouvoir, des alliances et des tensions au sein d'un board ou d'un comité de direction.</p><div class="foot">Sur conversation</div></div>
+    <div class="card reveal"><div class="num">06</div><h3>Calibrage du dirigeant</h3><p>Pour vous. Comment vous êtes perçu, vos angles morts non-verbaux, votre impact réel dans la pièce.</p><div class="foot">Sur conversation</div></div>
+  </div>
+</section>
+
+<!-- UNE LECTURE FONDÉE -->
+<section id="methode">
+  <div class="fondee-head reveal">
+    <div class="label">La méthode</div>
+    <h2 class="big">Une lecture fondée.<br>Pas une <em>intuition</em>.</h2>
+    <p>Rien d'ésotérique dans ma lecture. Elle repose sur la convergence de plusieurs disciplines rigoureuses et sur un protocole de profilage éprouvé sur le terrain, pendant des années, avant de l'être auprès de mes clients.</p>
+  </div>
+  <div class="quatre">
+    <div class="col reveal"><h3>Analyse comportementale &amp; socio-types</h3><p>L'ensemble des méthodes reconnues d'analyse comportementale et la matrice des socio-types, pour structurer ce qui resterait sinon une simple impression.</p></div>
+    <div class="col reveal"><h3>Neurosciences &amp; sciences cognitives</h3><p>Les travaux de chercheurs sur le visage, la voix et le corps : micro-expressions, charge cognitive, marqueurs de stress et signaux de congruence.</p></div>
+    <div class="col reveal"><h3>L'épreuve du terrain militaire</h3><p>Onze ans à lire les intentions avant les mots, dans un contexte où une erreur de lecture ne pardonne pas.</p></div>
+    <div class="col reveal"><h3>Une méthode éprouvée</h3><p>Un protocole de profilage affiné aux côtés d'un formateur de référence et validé sur plus de 10 000 personnes.</p></div>
+  </div>
+  <p class="fondee-pull reveal">Aucune boule de cristal. Une convergence de sciences, éprouvée par l'observation.</p>
+</section>
+
+<!-- POUR QUI -->
+<section class="pourqui">
+  <div class="reveal">
+    <div class="label">Pour qui</div>
+    <h2 class="big">Ceux dont les décisions n'ont pas droit à <em>l'erreur</em>.</h2>
+    <div class="tags">
+      <div class="tag-chip">Comités de direction</div>
+      <div class="tag-chip">Cabinets de M&amp;A</div>
+      <div class="tag-chip">Family offices</div>
+      <div class="tag-chip">Banques privées</div>
+      <div class="tag-chip">Cabinets d'avocats d'affaires</div>
+    </div>
+  </div>
+</section>
+
+<!-- LE PRATICIEN -->
+<section class="praticien">
+  <div class="praticien-grid">
+    <div class="praticien-img reveal">
+      <img src="michael-petit.jpg" alt="Michaël Petit">
+      <div class="cap">Michaël Petit · Fondateur de Signal</div>
+    </div>
+    <div class="praticien-body reveal">
+      <div class="label">Le praticien</div>
+      <h2>Michaël Petit</h2>
+      <p>Onze ans en environnement militaire à lire les intentions avant les mots. Un passage par l'hôtellerie de luxe, où la lecture de l'autre est un art silencieux. Aujourd'hui, conseiller comportemental discret auprès de décideurs au Luxembourg.</p>
+      <p>Je ne transmets pas ce que j'ai lu dans les livres. Je transmets ce que j'ai vécu sur le terrain.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-grid">
+    <div class="contact-left reveal">
+      <div class="label">Premier contact</div>
+      <h2>Une conversation. <em>Confidentielle</em>, sans engagement.</h2>
+      <p>Dites-moi l'enjeu en deux lignes. Je vous réponds personnellement, sous 24 heures.</p>
+    </div>
+    <div class="contact-form reveal">
+      <form id="form">
+        <div class="field"><label>Nom</label><input type="text" name="nom" required></div>
+        <div class="field"><label>Fonction &amp; société</label><input type="text" name="fonction"></div>
+        <div class="field"><label>Email</label><input type="email" name="email" required></div>
+        <div class="field"><label>Votre enjeu, en quelques mots</label><textarea name="enjeu"></textarea></div>
+        <button type="submit" class="submit">Demander la conversation</button>
+        <p class="confid">Échange strictement confidentiel.</p>
+        <p class="sent" id="sent">Votre messagerie WhatsApp va s'ouvrir pour finaliser l'envoi à Michaël.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="name">Signal</div>
+  <div class="moto">« Je lis les gens. »</div>
+  <div class="meta">Intelligence comportementale · Luxembourg · © 2026 Michaël Petit</div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
+  const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } }); }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // Numéro WhatsApp de Michaël, format international sans + ni espaces
+  const WHATSAPP_NUMERO = '33643181157';
+  document.getElementById('form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const f = e.target;
+    const message =
+      'Nouvelle demande · Signal\n\n' +
+      'Nom : ' + f.nom.value.trim() + '\n' +
+      'Fonction & société : ' + f.fonction.value.trim() + '\n' +
+      'Email : ' + f.email.value.trim() + '\n' +
+      'Enjeu : ' + f.enjeu.value.trim();
+    const url = 'https://wa.me/' + WHATSAPP_NUMERO + '?text=' + encodeURIComponent(message);
+    window.open(url, '_blank');
+    document.getElementById('sent').style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
